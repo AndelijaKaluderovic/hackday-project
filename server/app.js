@@ -32,7 +32,7 @@ app.get('/api/characters', async (req, res) => {
 
 app.get('/api/characters/:characterName', async (req, res) => {
     const { characterName } = req.params;
-    const oneCharacter = await fetchData(`http://gateway.marvel.com/v1/public/characters?name=${characterName}&ts=1&apikey=${apikey}&hash=${hash}`)
+    const oneCharacter = await fetchData(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${characterName}&ts=1&apikey=${apikey}&hash=${hash}`)
     res.send(oneCharacter);
 })
 

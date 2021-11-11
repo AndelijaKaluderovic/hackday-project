@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -5,10 +6,13 @@
   box-sizing: border-box;
 }
 .app{
-  font-family: 'Patrick Hand', cursive;
+  background-color: #FEDC0B;
+}
+.app{
+  font-family: 'Gluten', cursive;
 }
 .header{
-  background-color: rgb(45, 44, 44);
+  background-color: #091B1E;
   position: sticky;
   top: 0%;
   overflow: hidden;
@@ -17,7 +21,7 @@
 }
 .header__logo{
   height: 50px;
-  width: 150px;
+  width: 180px;
   display: block;
   margin: 0 auto;
   border-radius: 3px;
@@ -29,7 +33,7 @@
   width: 100%;
   height: 30px;
   background-color: rgb(213, 213, 213);
-  margin-top: 100px;
+  padding-top: 10px;
 }
 .footer__link{
   text-decoration: none;
@@ -37,12 +41,85 @@
   display: flex;
   justify-content: center;
 }
+.welcome{
+  display: block;
+  margin: 20px auto 10px auto;
+  text-align: center;
+  max-width: 350px;
+  font-size: 25px;
+}
 .search__input{
-  display:block;
-  margin: 20px auto;
+  display: block;
+  margin: 30px auto 10px auto;
+  padding-left: 15px;
   height: 30px;
   width: 250px;
-  font-size: 20px;
-  border: 2px solid rgb(255, 89, 89);
+  font-size: 15px;
+  border: 2px solid #091B1E;
   border-radius: 5px;
+  
+}
+.home{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-bottom: 30px;
+}
+.home__image{
+  height: 120px;
+  width: 120px;
+  border-radius: 30%;
+  margin: 10px;
+  transition: transform .2s;
+}
+.home__image:hover{
+  transform: scale(1.5);
+}
+.character{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #091B1E;
+  color: white;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 10px auto;
+  box-shadow:2px 2px 15px black;
+}
+.character__name{
+  margin-top: 10px;
+  font-size: 37px;
+  text-align: center;
+  color: #EE181E;
+}
+.character__description{
+  text-align: center;
+}
+.character__img{
+  margin-top: 20px;
+  border-radius: 30%;
+}
+.character__comics__heading,
+.character__series__heading,
+.character__stories__heading{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 35px;
+  color: #42A6DF;
+}
+.character__comics__list,
+.character__series__list,
+.character__stories__list{
+  text-align: center;
+  list-style-type: none;
+  padding: none;
+  margin-bottom: 15px;
+}
+.character__comics__list__li,
+.character__series__list__li,
+.character__stories__list__li,
+.character__description{
+  max-width: 380px;
+ line-height: 1.5;
 }

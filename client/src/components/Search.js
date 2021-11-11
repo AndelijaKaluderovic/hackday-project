@@ -22,7 +22,7 @@ const Search = ({setCharacter, character}) => {
     return (
         <div className="search" >
             <form className="search__form" type="submit" onSubmit={handleSubmit}>
-            <input className="search__input" type="text" placeholder="Find your hero.." />
+            <input className="search__input" type="text" placeholder="Find Your Hero... " />
             </form>
         </div>
     )
