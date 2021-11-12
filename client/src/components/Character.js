@@ -6,6 +6,7 @@ const Character = ({ character }) => {
     <div className="albhabet__characters" >
 
     {character.map((chars, i) => {
+      if (chars.comics.available !== 0) {
       return <div className="character" key={i}>
       <div className="character__image">
         <img className="character__img" src={`${chars.thumbnail.path}/standard_amazing.${chars.thumbnail.extension}`} alt={chars.name}></img>
@@ -33,7 +34,8 @@ const Character = ({ character }) => {
             return <li className="character__stories__list__li" key={i}>{title.name}</li>})}
           </ul>
         </div>
-    </div>
+    </div> }
+    return null;
     })}
     
     </div>
