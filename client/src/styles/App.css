@@ -5,7 +5,7 @@
   border: 0;
   box-sizing: border-box;
 }
-.app{
+body{
   background-color: #FEDC0B;
 }
 .app{
@@ -60,10 +60,10 @@
   
 }
 .home{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 .home__image{
   height: 120px;
