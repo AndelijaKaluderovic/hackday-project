@@ -1,6 +1,7 @@
 import express from 'express';
 import nodeFetch from 'node-fetch';
-import cors from 'cors';
+import dotenv from 'dotenv';
+
 const app = express();
 const port = 5000;
 
@@ -8,9 +9,9 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin','*');
     next();
   });
-
-const apikey = '5f6bb8134b17bcefebf2a23eca2c20f6';
-const hash = '55675ecfb9c7d87dc743637721994033';
+dotenv.config();
+const apikey = process.env.ACCESS_KEY;
+const hash = process.env.ACCESS_HASH;
 
 const fetchData = async (path) => {
     const response = await nodeFetch(path);
