@@ -17,6 +17,7 @@
     "nodemon": "^2.0.14"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0"
   }
 }
