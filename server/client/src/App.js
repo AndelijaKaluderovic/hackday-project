@@ -15,7 +15,7 @@ const App = () => {
   const [allCharacters, setAllCharacters] = useState([]);
   const [character, setCharacter] = useState([]);
 
-  const apiUrl = process.env.API_URL || 'http://localhost:5000'
+  const apiUrl = process.env.REACT_APP_API_URI || 'http://localhost:5000'
 
   const fetchData = async () => {
     await fetch(`${apiUrl}/api/characters`)
