@@ -30,7 +30,7 @@ const fetchData = async (path) => {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'server/build')));
+app.use(express.static(path.join(__dirname, 'server/client/build')));
 
 
 
@@ -46,7 +46,7 @@ app.get('/api/characters/:characterName', async (req, res) => {
 })
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'server/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'server/client/build', 'index.html'));
 });
 
 app.listen(process.env.PORT || port);

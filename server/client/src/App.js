@@ -15,24 +15,23 @@ const App = () => {
   const [allCharacters, setAllCharacters] = useState([]);
   const [character, setCharacter] = useState([]);
 
-  // const apiUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://powerful-beyond-95375.herokuapp.com/'
-  // const apiUrl = process.env.REACT_APP_API_URI;
+  const apiUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://powerful-beyond-95375.herokuapp.com/'
 
-  // const fetchData = async () => {
-  //   await fetch(`${apiUrl}/api/characters`)
-  //     .then(res => res.json())
-  //     .then(res => setAllCharacters(res.data.results))
-  // }
   const fetchData = async () => {
-    if (process.env.NODE_ENV === 'production') {
-      await fetch('https://powerful-beyond-95375.herokuapp.com/api/characters')
-        .then(res => res.json())
-        .then(res => setAllCharacters(res.data.results))
-    } else if (process.env.NODE_ENV === 'development') {
-      await fetch('http://localhost:5000/api/characters')
-        .then(res => res.json())
-        .then(res => setAllCharacters(res.data.results))
-    }}
+    await fetch(`${apiUrl}/api/characters`)
+      .then(res => res.json())
+      .then(res => setAllCharacters(res.data.results))
+  }
+  // const fetchData = async () => {
+  //   if (process.env.NODE_ENV === 'production') {
+  //     await fetch('https://powerful-beyond-95375.herokuapp.com/api/characters')
+  //       .then(res => res.json())
+  //       .then(res => setAllCharacters(res.data.results))
+  //   } else if (process.env.NODE_ENV === 'development') {
+  //     await fetch('http://localhost:5000/api/characters')
+  //       .then(res => res.json())
+  //       .then(res => setAllCharacters(res.data.results))
+  //   }}
     useEffect(() => {
       fetchData()
       return () => {
