@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Character = ({ character }) => {
-  console.log(character);
   return (
     <div className="albhabet__characters" >
 
