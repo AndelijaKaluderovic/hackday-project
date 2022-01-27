@@ -4,12 +4,13 @@ import { useNavigate } from 'react-router';
 const Search = ({setCharacter, character}) => {
 
     const navigate = useNavigate(); 
+    const apiUrl = process.env.API_URL || 'http://localhost:5000'
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const value = e.target.children[0].value;
         const fetchData = async () => {
-            await fetch(`http://localhost:5000/api/characters/${value}`)
+            await fetch(`${apiUrl}/api/characters/${value}`)
             .then(res => res.json())
             .then(res => {
                 const results = res.data.results;
